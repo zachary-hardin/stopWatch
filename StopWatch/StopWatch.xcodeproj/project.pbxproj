@@ -12,6 +12,8 @@
 		7479EAA21EBBFF900007B4C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7479EAA01EBBFF900007B4C1 /* Main.storyboard */; };
 		7479EAA41EBBFF900007B4C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7479EAA31EBBFF900007B4C1 /* Assets.xcassets */; };
 		7479EAA71EBBFF900007B4C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7479EAA51EBBFF900007B4C1 /* LaunchScreen.storyboard */; };
+		7479EAB01EBC0B0A0007B4C1 /* buttonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7479EAAF1EBC0B0A0007B4C1 /* buttonService.swift */; };
+		7479EAB31EBC0FB50007B4C1 /* timeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7479EAB21EBC0FB50007B4C1 /* timeService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7479EAA31EBBFF900007B4C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7479EAA61EBBFF900007B4C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7479EAA81EBBFF900007B4C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7479EAAF1EBC0B0A0007B4C1 /* buttonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = buttonService.swift; sourceTree = "<group>"; };
+		7479EAB21EBC0FB50007B4C1 /* timeService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = timeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 		7479EA9B1EBBFF900007B4C1 /* StopWatch */ = {
 			isa = PBXGroup;
 			children = (
+				7479EAB11EBC0FA10007B4C1 /* timeService */,
+				7479EAAE1EBC0AC50007B4C1 /* buttonService */,
 				7479EA9C1EBBFF900007B4C1 /* AppDelegate.swift */,
 				7479EA9E1EBBFF900007B4C1 /* ViewController.swift */,
 				7479EAA01EBBFF900007B4C1 /* Main.storyboard */,
@@ -62,6 +68,22 @@
 				7479EAA81EBBFF900007B4C1 /* Info.plist */,
 			);
 			path = StopWatch;
+			sourceTree = "<group>";
+		};
+		7479EAAE1EBC0AC50007B4C1 /* buttonService */ = {
+			isa = PBXGroup;
+			children = (
+				7479EAAF1EBC0B0A0007B4C1 /* buttonService.swift */,
+			);
+			name = buttonService;
+			sourceTree = "<group>";
+		};
+		7479EAB11EBC0FA10007B4C1 /* timeService */ = {
+			isa = PBXGroup;
+			children = (
+				7479EAB21EBC0FB50007B4C1 /* timeService.swift */,
+			);
+			name = timeService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,7 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7479EAB31EBC0FB50007B4C1 /* timeService.swift in Sources */,
 				7479EA9F1EBBFF900007B4C1 /* ViewController.swift in Sources */,
+				7479EAB01EBC0B0A0007B4C1 /* buttonService.swift in Sources */,
 				7479EA9D1EBBFF900007B4C1 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

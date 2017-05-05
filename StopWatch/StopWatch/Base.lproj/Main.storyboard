@@ -33,14 +33,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Hu-Y7-xdX">
                                         <rect key="frame" x="123" y="82.5" width="34" height="30"/>
                                         <state key="normal" title="Start"/>
+                                        <connections>
+                                            <action selector="startTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V7e-0F-xG3"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kdz-Cc-eQO">
                                         <rect key="frame" x="119" y="112.5" width="42" height="30"/>
                                         <state key="normal" title="Pause"/>
+                                        <connections>
+                                            <action selector="pauseTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BM6-bJ-1HE"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrF-bv-7eJ">
-                                        <rect key="frame" x="124" y="142.5" width="32" height="30"/>
-                                        <state key="normal" title="Stop"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrF-bv-7eJ" userLabel="Reset Button">
+                                        <rect key="frame" x="120.5" y="142.5" width="39" height="30"/>
+                                        <state key="normal" title="Reset"/>
+                                        <connections>
+                                            <action selector="clearTimer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Geg-ub-hbu"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -51,6 +60,12 @@
                             <constraint firstItem="csd-DH-wen" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gbh-Kb-iyt"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pauseButton" destination="kdz-Cc-eQO" id="OIq-6g-rYX"/>
+                        <outlet property="resetButton" destination="CrF-bv-7eJ" id="wbu-tK-ph3"/>
+                        <outlet property="startButton" destination="8Hu-Y7-xdX" id="Myb-KI-oe5"/>
+                        <outlet property="timeLabel" destination="bPb-5h-1kG" id="3Pv-rO-AS0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
