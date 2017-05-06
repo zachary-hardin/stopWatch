@@ -15,28 +15,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet weak var resetButton: UIButton!
     
-    var timerStartValue = "00:00:00"
     var timer = Timer()
     var isPlaying = false
-    var counter = 0.0
+    var stopWatch = StopWatch()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timeLabel.text = String(counter)
+        setInitialTimeLabel()
         disableButton(button: pauseButton)
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-    func updateTimer() {
-        counter = counter + 0.1
-        timeLabel.text = String(format: "%.1f", counter)
-    }
-    
     //MARK: Actions
     @IBAction func startTimer(_ sender: Any) {
         if (isPlaying) {
@@ -46,14 +39,37 @@ class ViewController: UIViewController {
         disableButton(button: startButton)
         enableButton(button: pauseButton)
         
-        timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
         isPlaying = true
     }
     
     @IBAction func pauseTimer(_ sender: Any) {
+        disableButton(button: pauseButton)
+        enableButton(button: startButton)
+        
+        timer.invalidate()
+        isPlaying = false
     }
     
     @IBAction func clearTimer(_ sender: Any) {
+        enableButton(button: startButton)
+        disableButton(button: pauseButton)
+        
+        timer.invalidate()
+        isPlaying = false
+        
+        stopWatch.resetTime()
+        
+        setInitialTimeLabel()
+    }
+    
+    //MARK: Helpers
+    func updateTimer() {
+        stopWatch.increaseTimer(timeLabel)
+    }
+    
+    func setInitialTimeLabel() {
+        timeLabel.text = String(stopWatch.initialTime)
     }
 }
 
